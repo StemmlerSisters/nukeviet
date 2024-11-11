@@ -115,6 +115,7 @@ $lang_module['memberlist_edit'] = 'Sửa';
 $lang_module['memberlist_deleteconfirm'] = 'Bạn có chắc muốn xóa tài khoản đã chọn ?';
 $lang_module['edit_title'] = 'Sửa thông tin tài khoản';
 $lang_module['edit_password_note'] = 'Để trống 2 khung bên dưới nếu không muốn thay đổi mật khẩu';
+$lang_module['edit_password_note2'] = 'Lưu ý: Đổi mật khẩu không làm đăng xuất người dùng khỏi các phiên hiện có. Nếu bạn muốn ép đăng xuất hãy chọn vào mục &quot;Buộc đăng xuất&quot; bên trên';
 $lang_module['edit_avatar_note'] = 'Để trống nếu không muốn thay thế avatar mới';
 $lang_module['edit_save'] = 'Chấp nhận';
 $lang_module['edit_error_username_exist'] = 'Tên người dùng này đã được tài khoản khác sử dụng. Hãy chọn tên khác';
@@ -247,6 +248,8 @@ $lang_module['unactive_users'] = 'Ngưng Kích hoạt tài khoản';
 $lang_module['whoviewlistuser'] = 'Ai được xem danh sách tài khoản';
 $lang_module['random_password'] = 'Tạo mật khẩu ngẫu nhiên';
 $lang_module['show_password'] = 'Hiển thị mật khẩu';
+$lang_module['force_logout'] = 'Buộc đăng xuất';
+$lang_module['force_logout1'] = 'Đăng xuất khỏi tất cả các phiên đăng nhập nếu có, bao gồm cả phiên này';
 
 $lang_module['usactive'] = 'Trạng thái tài khoản';
 $lang_module['usactive_0'] = 'Tài khoản bị khóa';

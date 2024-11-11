@@ -116,6 +116,7 @@ if ($nv_Request->isset_request('confirm', 'post')) {
     $_user['delpic'] = $nv_Request->get_int('delpic', 'post', 0);
     $_user['is_official'] = $nv_Request->get_int('is_official', 'post', 0);
     $_user['adduser_email'] = $nv_Request->get_int('adduser_email', 'post', 0);
+    $_user['force_logout'] = (int) $nv_Request->get_bool('force_logout', 'post', false);
 
     $custom_fields = $nv_Request->get_array('custom_fields', 'post');
     $custom_fields['first_name'] = $_user['first_name'];
@@ -364,6 +365,16 @@ if ($nv_Request->isset_request('confirm', 'post')) {
         }
         $message .= sprintf($lang_module['adduser_register_info4'], $global_config['site_name']);
         @nv_sendmail([$global_config['site_name'], $global_config['site_email']], $_user['email'], $subject, $message);
+    }
+
+    if (!empty($_user['force_logout'])) {
+        $sql = "UPDATE " . NV_MOD_TABLE . " SET checknum='' WHERE userid=" . $userid;
+        $db->query($sql);
+
+        if ($module_name == 'users') {
+            $sql = "UPDATE " . NV_AUTHORS_GLOBALTABLE . " SET check_num='' WHERE admin_id=" . $userid;
+            $db->query($sql);
+        }
     }
 
     nv_insert_logs(NV_LANG_DATA, $module_name, 'log_edit_user', 'userid ' . $userid, $admin_info['userid']);
