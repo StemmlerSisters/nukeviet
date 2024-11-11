@@ -726,6 +726,9 @@ function nv_is_image($img)
             $typeflag[15] = ['type' => IMAGETYPE_WBMP, 'ext' => 'wbmp'];
             $typeflag[16] = ['type' => IMAGETYPE_XBM, 'ext' => 'xbm'];
 
+            // From php 7.1
+            defined('IMAGETYPE_WEBP') && $typeflag[18] = ['type' => IMAGETYPE_WEBP, 'ext' => 'webp'];
+
             $imageinfo['src'] = $img;
             $imageinfo['width'] = $file[0];
             $imageinfo['height'] = $file[1];
