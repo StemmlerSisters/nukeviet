@@ -249,7 +249,7 @@ $lang_module['whoviewlistuser'] = 'Ai được xem danh sách tài khoản';
 $lang_module['random_password'] = 'Tạo mật khẩu ngẫu nhiên';
 $lang_module['show_password'] = 'Hiển thị mật khẩu';
 $lang_module['force_logout'] = 'Buộc đăng xuất';
-$lang_module['force_logout1'] = 'Đăng xuất khỏi tất cả các phiên đăng nhập nếu có, bao gồm cả phiên này';
+$lang_module['force_logout1'] = 'Đăng xuất khỏi tất cả các phiên đăng nhập tại khu vực người dùng nếu có';
 
 $lang_module['usactive'] = 'Trạng thái tài khoản';
 $lang_module['usactive_0'] = 'Tài khoản bị khóa';
