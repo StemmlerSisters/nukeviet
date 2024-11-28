@@ -149,7 +149,7 @@ $lang_module['proxy_blocker_2'] = 'Medium';
 $lang_module['proxy_blocker_3'] = 'High';
 $lang_module['str_referer_blocker'] = 'Activate block referers';
 $lang_module['my_domains'] = 'Domains';
-$lang_module['searchEngineUniqueID'] = 'Google search Engine ID<br />(format 000329275761967753447:sr7yxqgv294 , <a href="http://nukeviet.vn/vi/faq/Su-dung-Google-Custom-Search-tren-NukeViet/" target="_blank">view details</a>)';
+$lang_module['searchEngineUniqueID'] = 'Google search Engine ID<br />(format 000329275761967753447:sr7yxqgv294 , <a href="https://nukeviet.vn/vi/faq/Su-dung-Google-Custom-Search-tren-NukeViet/" target="_blank">view details</a>)';
 $lang_module['variables'] = 'Setup cookie session';
 $lang_module['cookie_prefix'] = 'Cookie prefix';
 $lang_module['session_prefix'] = 'Session\'s prefix';
