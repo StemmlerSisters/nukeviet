@@ -34,12 +34,11 @@ $body_contents = $db_slave->query('SELECT titlesite, description, bodyhtml, voic
 $news_contents = array_merge($news_contents, $body_contents);
 unset($body_contents);
 
+$news_contents['files'] = empty($news_contents['files']) ? [] : explode(',', $news_contents['files']);
+
 // Tải về đính kèm
 if ($nv_Request->isset_request('download', 'get')) {
     $fileid = $nv_Request->get_int('id', 'get', 0);
-
-    $news_contents['files'] = explode(',', $news_contents['files']);
-
     if (!isset($news_contents['files'][$fileid])) {
         nv_redirect_location(NV_BASE_SITEURL . 'index.php?' . NV_LANG_VARIABLE . '=' . NV_LANG_DATA . '&' . NV_NAME_VARIABLE . '=' . $module_name, true);
     }
@@ -57,9 +56,6 @@ if ($nv_Request->isset_request('download', 'get')) {
 // Xem đính kèm dạng PDF
 if ($nv_Request->isset_request('pdf', 'get')) {
     $fileid = $nv_Request->get_int('id', 'get', 0);
-
-    $news_contents['files'] = explode(',', $news_contents['files']);
-
     if (!isset($news_contents['files'][$fileid])) {
         nv_info_die($lang_global['error_404_title'], $lang_global['error_404_title'], $lang_global['error_404_content'], 404);
     }
@@ -177,7 +173,6 @@ if (defined('NV_IS_MODADMIN') or ($news_contents['status'] == 1 and $news_conten
 
     // File download
     if (!empty($news_contents['files'])) {
-        $news_contents['files'] = explode(',', $news_contents['files']);
         $files = $news_contents['files'];
         $news_contents['files'] = [];
 
